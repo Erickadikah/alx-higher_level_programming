@@ -1,1 +1,1 @@
-this a python project on data structures: list amizing work 
+this a python by Erick adikah project on data structures: list amizing work 
