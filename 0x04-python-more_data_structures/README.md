@@ -1,2 +1,2 @@
 python more data structures: set & dictionary
-by Erick adikah
+by AUTHOR Erick adikah 
