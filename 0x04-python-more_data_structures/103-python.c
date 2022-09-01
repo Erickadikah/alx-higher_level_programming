@@ -1,31 +1,49 @@
-import ctypes
+#include <Python.h>
+#include <object.h>
+#include <listobject.h>
+#include <bytesobject.h>
 
-lib = ctypes.CDLL('./libPython.so')
-lib.print_python_list.argtypes = [ctypes.py_object]
-lib.print_python_bytes.argtypes = [ctypes.py_object]
-s = b"Hello"
-lib.print_python_bytes(s);
-b = b'\xff\xf8\x00\x00\x00\x00\x00\x00';
-lib.print_python_bytes(b);
-b = b'What does the \'b\' character do in front of a string literal?';
-lib.print_python_bytes(b);
-l = [b'Hello', b'World']
-lib.print_python_list(l)
-del l[1]
-lib.print_python_list(l)
-l = l + [4, 5, 6.0, (9, 8), [9, 8, 1024], b"Holberton", "Betty"]
-lib.print_python_list(l)
-l = []
-lib.print_python_list(l)
-l.append(0)
-lib.print_python_list(l)
-l.append(1)
-l.append(2)
-l.append(3)
-l.append(4)
-lib.print_python_list(l)
-l.pop()
-lib.print_python_list(l)
-l = ["Holberton"]
-lib.print_python_list(l)
-lib.print_python_bytes(l);
+void print_python_bytes(PyObject *p)
+{
+	long int size;
+	int i;
+	char *trying_str = NULL;
+
+	printf("[.] bytes object info\n");
+	if (!PyBytes_Check(p))
+	{
+		printf("  [ERROR] Invalid Bytes Object\n");
+		return;
+	}
+
+	PyBytes_AsStringAndSize(p, &trying_str, &size);
+
+	printf("  size: %li\n", size);
+	printf("  trying string: %s\n", trying_str);
+	if (size < 10)
+		printf("  first %li bytes:", size + 1);
+	else
+		printf("  first 10 bytes:");
+	for (i = 0; i <= size && i < 10; i++)
+		printf(" %02hhx", trying_str[i]);
+	printf("\n");
+}
+
+void print_python_list(PyObject *p)
+{
+        long int size = PyList_Size(p);
+        int i;
+        PyListObject *list = (PyListObject *)p;
+        const char *type;
+
+        printf("[*] Python list info\n");
+        printf("[*] Size of the Python List = %li\n", size);
+        printf("[*] Allocated = %li\n", list->allocated);
+        for (i = 0; i < size; i++)
+        {
+                type = (list->ob_item[i])->ob_type->tp_name;
+		printf("Element %i: %s\n", i, type);
+                if (!strcmp(type, "bytes"))
+                        print_python_bytes(list->ob_item[i]);
+        }
+}
