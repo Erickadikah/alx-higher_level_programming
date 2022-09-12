@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def safe_print_list_intergers(my_list=[], x=0):
+def safe_print_list_integers(my_list=[], x=0):
 
     index = printed_ints = 0
     while True:
