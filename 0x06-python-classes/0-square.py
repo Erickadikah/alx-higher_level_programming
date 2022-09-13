@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""docstring for sqaure"""
+
+
+"""docstring for square"""
+
 
 class Square:
-"""docstring for init"""
+    """docstring for init"""
     def __init__(self):
         pass
