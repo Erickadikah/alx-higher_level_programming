@@ -2,5 +2,6 @@
 """docstring for sqaure"""
 
 class Square:
-    def __int__(self):
+"""docstring for init"""
+    def __init__(self):
         pass
