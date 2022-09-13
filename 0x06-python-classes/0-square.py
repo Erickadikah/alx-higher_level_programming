@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
-class square:
+
+class Square:
       def __int__(self, name):
         pass
