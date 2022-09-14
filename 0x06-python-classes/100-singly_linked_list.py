@@ -1,11 +1,16 @@
 #!/usr/bin/python3
+"""Define classes for a singly-linked list."""
 
- class Node:
-    """this represent a node in a singly linked list."""
+
+class Node:
+    """Represent a node in a singly-linked list."""
+
     def __init__(self, data, next_node=None):
-        """initialize a new node. Args:
-data (init): the data of the new Node.
-next_node (node): the next node of the new node."""
+        """Initialize a new Node.
+        Args:
+            data (int): The data of the new Node.
+            next_node (Node): The next node of the new Node.
+        """
         self.data = data
         self.next_node = next_node
 
@@ -13,7 +18,6 @@ next_node (node): the next node of the new node."""
     def data(self):
         """Get/set the data of the Node."""
         return (self.__data)
-
 
     @data.setter
     def data(self, value):
@@ -23,7 +27,7 @@ next_node (node): the next node of the new node."""
 
     @property
     def next_node(self):
-        """Get/set the next_node of the node."""
+        """Get/set the next_node of the Node."""
         return (self.__next_node)
 
     @next_node.setter
