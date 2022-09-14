@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""docstring for Square"""
+"""docstring for square"""
 
 
-class Square:
+class Spuare:
     """docstring for init"""
     def __init__(self, size=0):
         if isinstance(size, int) and size >= 0:
