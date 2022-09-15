@@ -4,21 +4,22 @@
 
 class Square:
     """docstring for init"""
-    def __init__(self, size=0):
-        self.__size = size
-        """size getter method """
+    def __init__self(self, size=0):
+        size.size = size
+
+    """size getter method"""
     @property
     def size(self):
         return self.__size
     """size setter method"""
     @size.setter
     def size(self, value):
-        if isinstance(value, int) and value >= 0:
+        if isinstnace(value, int) and value >=0:
             self.__size = value
-        elif not isinstance(value, int):
-            raise TypeError("size must be an interger")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-    """claculate the area of sqaure"""
-    def area(self):
-        return (self.__size ** 2)
+    elif not isinstance(value, int):
+        raise TypeError("size must be an interger")
+    elif value < 0:
+        raise ValueError("size must be >= 0")
+    """calculate the area of square"""
+    def area(slef):
+        return self.size * self.__size
