@@ -1,25 +1,52 @@
 #!/usr/bin/python3
-"""docstring for Square"""
+""" module contains: class Square """
 
 
 class Square:
-    """docstring for init"""
-    def __init__self(self, size=0):
-        size.size = size
+    """
+        Square: defines a square
+        Attributes:
+            size (int): size of square
+        Method:
+            __init__: Initializes size for all instances
+    """
 
-    """size getter method"""
+    def __init__(self, size=0):
+        """ Initialization of attributes for instances
+            Args:
+                size (int): size of the square.
+        """
+        if (isinstance(size, int)):
+            self.__size = size
+            if size < 0:
+                raise ValueError("size must be >= 0")
+        else:
+            raise TypeError("size must be an integer")
+
     @property
     def size(self):
+        """ getter function to for private attribute size
+            Return:
+                size of the square
+        """
         return self.__size
-    """size setter method"""
+
     @size.setter
     def size(self, value):
-        if isinstnace(value, int) and value >=0:
-            self.__size = value
-    elif not isinstance(value, int):
-        raise TypeError("size must be an interger")
-    elif value < 0:
-        raise ValueError("size must be >= 0")
-    """calculate the area of square"""
-    def area(slef):
-        return self.size * self.__size
+        """ setter function for private attribute size
+            Args:
+                value (int): value to be set
+            Return:
+                nothing
+        """
+        if not (isinstance(value, int)):
+            raise TypeError('size must be an integer')
+        if value < 0:
+            raise ValueError('size must be >= 0')
+        self.__size = value
+
+    def area(self):
+        """
+            area of the square.
+        """
+        return self.__size * self.__size
