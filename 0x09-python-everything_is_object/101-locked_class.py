@@ -1,5 +1,6 @@
 #!/usr/bin/python3
+"""Defines a locked class."""
+
+
 class LockedClass:
-    """Prevents user from isntatiating new locked class"""
-    """For any attribute called 'first name"""
     __slots__ = ["first_name"]
