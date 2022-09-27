@@ -1,19 +1,20 @@
 #!/usr/bin/python3
 
 """
-contains the class BaseGeometry and subclass rectangle
+Contains the clas BaseGeometry qand subclass Rectangle
 """
 
-Rectangle = __import__('9-rectangle.py').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
-class Spuare(Rectangle):
-    """isntantation of a square"""
+
+class Square(Rectangle):
+    """A representation of a square"""
     def __init__(self, size):
-        """instatiation of the square"""
-        self.interger_validator("size", size)
+        """instantiation of the square"""
+        self.integer_validator("size", size)
         self.__size = size
-        sepre().__init__(size, size)
+        super().__init__(size, size)
 
     def area(self):
         """returns the area of the square"""
-        return self.size__size ** 2
+        return self.__size ** 2
