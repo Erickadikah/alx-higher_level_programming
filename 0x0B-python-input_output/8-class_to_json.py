@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 contains the "class_to json" function 
 """
