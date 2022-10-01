@@ -2,8 +2,9 @@
 """Defines a base models class."""
 import json
 import csv
+import json
+import csv
 import turtle
-
 
 class Base:
     """Represent the base model.
@@ -16,17 +17,13 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-    """initilizes a new Base.
+        """initializes the base model.
+        represent the "base" for all classes in the project.
 
-    Args:
-        id (int): the identity of tyhe new Base.
-    """
+        Attributes:
+            __nb_objects (int): the number of instantieted bases.
 
-    if id is not None:
-        self.id = id
-    else:
-        Base.__nb_objects += 1
-        self.id = Base.__nb_objects
+        """
 
 @staticmethod
 def to__json_string(list_dictionaries):
@@ -35,9 +32,9 @@ def to__json_string(list_dictionaries):
     Args:
         list_dictionaries (list): A list of dictionaries.
     """
-if list_dictionaries is none or list_dictionaries == []:
-    return "[]"
-return json.dumps(list_dictionaries)
+    if list_dictionaries is None or list_dictionaries == []:
+        return "[]"
+    return json.dumps(list_dictionaries)
 
 @classmethod
 def save_to_file(cls, list_objs):
@@ -46,11 +43,11 @@ def save_to_file(cls, list_objs):
     Args:
         list_objs (list) A list of inherited base instances.
     """
-filename = cls.__name__ + ".json"
-with open(filename, "w") as jsonfile:
-    if list_objs is None:
+    filename = cls.__name__ + ".json"
+    with open(filename, "w") as jsonfile:
+      if list_objs is None:
         jsonfile.write("[]")
-    else:
+      else:
         list_dicts = [o.to_dictionary() for o in list_objs]
         jsonfile.write(Base.to_json_string(list_dicts))
 
