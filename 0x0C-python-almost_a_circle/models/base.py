@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-"""defines a base class ,"""
+"""defines a base class."""
 import json
 import csv
 import turtle
 
+
 class Base:
-    """Represent the base model.
-    Represents the "base" for all other classes in project.
+     """Represent the base model.
+
+    Represents the "base" for all other classes in project 0x0C*.
 
     Attributes:
-        __nb_objects (int): The number of instatieted Base.
+        __nb_objects (int): The number of instantiated Bases.
     """
 
-    __nb_object = 0
+    __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initializes a new Base.
-
+        """Initialize a new Base.
         Args:
             id (int): The identity of the new Base.
         """
