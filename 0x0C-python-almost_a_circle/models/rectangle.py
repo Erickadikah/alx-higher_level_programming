@@ -71,15 +71,15 @@ class Rectangle(Base):
 
     def display(self):
         """prints rectangle using the '#' character"""
-        if self.width == 0 or self.height == 0:
-            print("")
+        if (self.width == 0) or (self.height == 0):
+            print()
             return
 
-    [print("") for y in range(self.y)]
-    for h in range(self.height):
-        [print(" ", end="") for x in range(self.x)]
-        [print("#", end="") for w in range(self.width)]
-        print("")
+    [print() for y in range(0, self.y)]
+    for h in range(0, self.height):
+        [print(" ", end="") for x in range(0, self.x)]
+        [print("#", end="") for w in range(0, self.width)]
+        print()
 
     def update(self, *args, **kwargs):
         """update the Rectangle"""
@@ -110,3 +110,6 @@ class Rectangle(Base):
             "x": self.x,
             "y": self.y
             }
+    def __str__(self):
+        """Return the print() and str() representation of the Rectangle."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
