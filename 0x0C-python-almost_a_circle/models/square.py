@@ -4,24 +4,25 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    def __init__(self, size, x=0, y=0, id=None):
-        """Initializes a new square.
+    """Represent a square."""
 
+    def __init__(self, size, x=0, y=0, id=None):
+        """Initialize a new Square.
         Args:
-            size (int): the size of the new square.
-            x (int): the x coordinate of the new square.
-            y (int): the y coodinate of the new sqaure.
-            id (int): te identity of the new square.
+            size (int): The size of the new Square.
+            x (int): The x coordinate of the new Square.
+            y (int): The y coordinate of the new Square.
+            id (int): The identity of the new Square.
         """
-        self.id = id
-        self.size = size
-        self.x = x
-        self.y = y
+
         super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        return ('[Square] ({}) {}/{} - {}'.format(self.id, self.x,
+                                                      self.y, self.width))
 
     @property
     def size(self):
-        """get/set the size of the square."""
         return self.width
 
     @size.setter
@@ -30,55 +31,27 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Update the Square.
-        Args:
-            *args (ints): New attribute values.
-                - 1st argument represents id attribute
-                - 2nd argument represents size attribute
-                - 3rd argument represents x attribute
-                - 4th argument represents y attribute
-            **kwargs (dict): New key/value pairs of attributes.
-        """
-        if args and len(args) != 0:
-            a = 0
-            for arg in args:
-                if a == 0:
-                    if arg is None:
-                        self.__init__(self.size, self.x, self.y)
-                    else:
-                        self.id = arg
-                elif a == 1:
-                    self.size = arg
-                elif a == 2:
-                    self.x = arg
-                elif a == 3:
-                    self.y = arg
-                a += 1
-
-        elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs.items():
-                if k == "id":
-                    if v is None:
-                        self.__init__(self.size, self.x, self.y)
-                    else:
-                        self.id = v
-                elif k == "size":
-                    self.size = v
-                elif k == "x":
-                    self.x = v
-                elif k == "y":
-                    self.y = v
+        """updates multiple attributes"""
+        if len(args):
+            for i, a in enumerate(args):
+                if i == 0:
+                    self.id = a
+                elif i == 1:
+                    self.size = a
+                elif i == 2:
+                    self.x = a
+                elif i == 3:
+                    self.y = a
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.width = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
 
     def to_dictionary(self):
         """Return the dictionary representation of the Square."""
-        return {
-            "id": self.id,
-            "size": self.width,
-            "x": self.x,
-            "y": self.y
-        }
-
-    def __str__(self):
-        """Return the print() and str() representation of a Square."""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                                                 self.width)
+        return ({"id": self.id, "size": self.width, "x": self.x, "y": self.y})
