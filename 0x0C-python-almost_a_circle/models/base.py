@@ -5,20 +5,20 @@ import csv
 import turtle
 
 class Base:
-    """represent the base model.
+    """Represent the base model.
     Represents the "base" for all other classes in project.
 
-    Attibutes:
-        __nb_objects (int): the number of intatieted Base
+    Attributes:
+        __nb_objects (int): The number of instatieted Base.
     """
 
-    __nb_objects = 0
+    __nb_object = 0
 
     def __init__(self, id=None):
-        """initilaze a new base.
+        """Initializes a new Base.
 
         Args:
-            id (id): the identity of the new Base.
+            id (int): The identity of the new Base.
         """
         if id is not None:
             self.id = id
