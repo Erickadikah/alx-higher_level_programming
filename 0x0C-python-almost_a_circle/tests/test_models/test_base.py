@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Unittest classes:
+"""Defines unittests for base.py.
+Unittest classes:
     TestBase_instantiation - line 23
     TestBase_to_json_string - line 110
     TestBase_save_to_file - line 156
@@ -12,7 +13,7 @@
 import os
 import unittest
 from models.base import Base
-from models.resctangle import Rectangle
+from models.rectangle import Rectangle
 from models.square import Square
 
 
@@ -49,7 +50,7 @@ class TestBase_instantiation(unittest.TestCase):
         b.id = 15
         self.assertEqual(15, b.id)
 
-        def test_nb_instances_private(self):
+    def test_nb_instances_private(self):
         with self.assertRaises(AttributeError):
             print(Base(12).__nb_instances)
 
