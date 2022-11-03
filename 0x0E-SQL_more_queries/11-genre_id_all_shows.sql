@@ -1,4 +1,5 @@
- -- Import the database dump from hbtn_0d_tvshows to my MySQL server
+-- Import the database dump from hbtn_0d_tvshows
+-- least one genre linked
 SELECT `tv_shows`.`title`, `tv_show_genres`.`genre_id`
 FROM `tv_shows`
 LEFT JOIN `tv_show_genres`
