@@ -13,6 +13,7 @@
 <li>0x0A. Python - Inheritance</li>
 <li> 0x0B. Python - Input/Output</li>
 <li> 0x0C. Python - Almost a circle</li>
+<li>0x12. JavaScript - Warm up</li>
 <h3>Higher-level programming - Databases</h3>
 <li>272 0x0D. SQL - Introduction</li>
 <li>0x0E. SQL - More queries</li>
