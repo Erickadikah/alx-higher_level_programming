@@ -8,7 +8,8 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", user="root", passwd=sys.argv[2], port=3306, db=sys.argv[3])
+    db = MySQLdb.connect(host="localhost", user="root",
+            passwd=sys.argv[2], port=3306, db=sys.argv[3])
     c = db.cursor()
     c.execute("SELECT * FROM `cities` INNER JOIN `states` \
             ON  `cities`.`state_id` = `states`.`id` \
