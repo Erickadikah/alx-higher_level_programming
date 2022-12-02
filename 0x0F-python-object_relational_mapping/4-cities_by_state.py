@@ -15,6 +15,3 @@ if __name__ == "__main__":
             FROM `cities` INNER JOIN `states` ON `cities`.`state_id`\
             = `states`.`id` ORDER BY `cities`.`id`")
     [print(city) for city in cur.fetchall()]
-
-cur.close()
-db.close()
