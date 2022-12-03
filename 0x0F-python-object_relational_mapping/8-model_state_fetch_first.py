@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """
 a script that lists all State objects from the database hbtn_0e_6_usa
-taking 3 arguments mysql username\
-        mysql password\
-        database name.
+taking 3 arguments mysql username, mysql password, database name.
 """
 import sys
 from sqlalchemy import create_engine
