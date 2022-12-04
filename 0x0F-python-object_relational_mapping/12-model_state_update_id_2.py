@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-a script that adds the state objects"luisiana" to the database
-and argument in  database hbtn_0e_6_usa
+a script that adds the state objects"New Mexico" to the database
+and argument in id= "2",  database hbtn_0e_6_usa
 taking 3 arguments mysql username, mysql password, database name.
 """
 import sys
@@ -16,7 +16,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    Louisiana = State(name="Louisiana")
-    session.add(Louisiana)
+    state = session.query(State).filter_by(id=2).first()
+    state.name = "New Mexico"
     session.commit()
-    print(Louisiana.id)
