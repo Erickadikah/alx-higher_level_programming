@@ -10,7 +10,7 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class States(Base):
+class State(Base):
     """represents a state for a MySQL database."""
     __tablename__ = "states"
     id = Column(Integer, primary_key=True)
