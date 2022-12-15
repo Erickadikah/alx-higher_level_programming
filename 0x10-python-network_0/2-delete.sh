@@ -1,4 +1,4 @@
 #!/bin/bash
-#script DELETE request
+#script that sends DELETE request
 
-curl -s "$1" -X DELETE
+curl -X "$1" DELETE "$1" -s
