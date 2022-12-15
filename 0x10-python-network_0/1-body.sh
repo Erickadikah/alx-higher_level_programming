@@ -1,5 +1,3 @@
 #!/bin/bash
-# display content size using curl
-#curl -sI "$1" | grep -i 'content-length' | cut -d " " -f1
-
-result=$(curl -sI "$1" | grep -i 'HTTP/1.1' | cut -d " " -f2); if [ "$result" -eq 200 ]; then curl -sI "$1"; fi
+#a script that takes url and displays body of 200 response size using curl
+curl -sL "$1"
