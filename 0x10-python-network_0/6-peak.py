@@ -1,12 +1,12 @@
-#!/usr/bin/pyhon3
-"""afuction that finds a peak in
-    alist of unsorted intergers
+#!/usr/bin/python3
+"""
+finding peak
 """
 
 
 def find_peak(list_of_integers):
-    """function that finds peak in a list"""
-    if list_of_integers == []:
+    #sort list
+    if len(list_of_integers) == 0:
         return None
     list_of_integers.sort()
     return list_of_integers[-1]
