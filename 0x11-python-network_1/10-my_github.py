@@ -5,14 +5,9 @@
 """
 import sys
 import requests
-from pprint import pprint
-
+from requests.auth import HTTPBasicAuth
 
 if __name__ == "__main__":
-    username = sys.argv[1]
-    # url to request
-    url = f"https://api.github.com/users/{username}"
-    # make the request and return the json
-    user_data = requests.get(url).json()
-    # pretty print JSON data
-    pprint(user_data['id'])
+    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    r = requests.get("https://api.github.com/user", auth=auth)
+    print(r.json().get("id"))
