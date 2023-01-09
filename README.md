@@ -1,7 +1,7 @@
 # Higher Level Programming - Python, SQL & JavaScript
-* [0x00. Python - Hello, World](alx-higher_level_programming)
-* [0x01. Python - if/else, loops, functions](alx-higher_level_programming)
-* [0x02. Python - import & modules](alx-higher_level_programming)
+* [0x00. Python - Hello, World](./alx-higher_level_programming/0x00. Python - Hello, World/)
+* [0x01. Python - if/else, loops, functions](alx-higher_level_programming/0x01. Python - if/else, loops, functions/)
+* [0x02. Python - import & modules](./alx-higher_level_programming/0x02. Python - import & modules)
 * [0x03. Python - Data Structures: Lists, Tuples](alx-higher_level_programming)
 * [0x04. Python - More Data Structures: Set, Dictionary](alx-higher_level_programming)
 * [0x05. Python - Exceptions](alx-higher_level_programming)
