@@ -19,4 +19,5 @@
 * [0x11. Python - Network #1](alx-higher_level_programming)
 * [0x12. JavaScript - Warm up](alx-higher_level_programming)
 * [0x13. JavaScript - Objects, Scopes and Closures](alx-higher_level_programming)
+* [0x14. JavaScript - Web scraping](alx-higher_level_programming)
 <p>Focus on OOP</p>
