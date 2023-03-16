@@ -14,3 +14,14 @@ userId.toFixed()
 let isLoggedIn: boolean = false
 
 export {} //temprarily removes the error
+
+//any is not a good practice
+//Break constistency of the code
+
+let hero: string;
+
+function getHero(){
+    return "thor"
+}
+
+hero = getHero()

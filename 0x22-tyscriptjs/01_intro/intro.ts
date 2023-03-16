@@ -1,3 +1,4 @@
-let user = { name: "Erick", age: 22, isMarried: false };
+var user = { name: "Erick", age: 22 };
 
-console.log(user);
+console.log("Erick");
+console.log(user.name);
