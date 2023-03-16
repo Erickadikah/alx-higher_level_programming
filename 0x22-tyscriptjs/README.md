@@ -4,25 +4,25 @@
 
 <h2>Tools to use</h2>
 
-* [typescript config file]
-* [typescript compiler]
-* [typescript editor]
-* [typescript linter]
-* [arrays]
-* [classes]
-* [interfaces]
-* [generics]
-* [modules]
-* [decorators]
-* [typescript in nodejs]
-* [typescript in react]
-* [typescript in angular]
-* [typescript in vue]
-* [typescript in nestjs]
-* [typescript in express]
-* [typescript in graphql]
-* [typescript in apollo]
-* [typescript in typeorm]
-* [functions]
-* [typescript in mongodb]
-* [typescript in mysql]
+* typescript config file
+* typescript compiler
+* typescript editor
+* typescript linter
+* arrays
+* classes
+* interfaces
+* generics
+* modules
+* decorators
+* typescript in nodejs
+* typescript in react
+* typescript in angular
+* typescript in vue
+* typescript in nestjs
+* typescript in express
+* typescript in graphql
+* typescript in apollo
+* typescript in typeorm
+* functions
+* typescript in mongodb
+* typescript in mysql
