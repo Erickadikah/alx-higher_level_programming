@@ -29,11 +29,21 @@ const getHello =(s: string): string => { //implementation in a arrow function
     return ""
 }
 
-const food = ["pizza", "burger", "hotdog", "tacos", "sushi"]
+// const food = ["pizza", "burger", "hotdog", "tacos", "sushi"] // automatically ype string
+const food = [1, 2, 3, 4, 5] //automatically changes to number no annotation needed
 
 food.map(food => {
     return `food is ${food}`
 })
+
+
+function consoleError(errormsg: string): void {
+    console.log(errormsg);
+}
+
+function handleError(errormsg: string): never {
+     throw new Error(errormsg);
+}
 
 addTwo(5)
 getUpper("Erick")
