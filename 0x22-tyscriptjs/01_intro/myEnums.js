@@ -1,3 +1,3 @@
 "use strict";
-exports.__esModule = true;
-var hcSeat = 0 /* seatChoice.AISLE */;
+Object.defineProperty(exports, "__esModule", { value: true });
+const hcSeat = 0 /* seatChoice.AISLE */;
