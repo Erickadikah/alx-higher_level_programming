@@ -42,5 +42,6 @@ class SubUser extends User {
         this._courseCount = 2;
     }
 }
+//interfaces
 const Erick = new User("erick2030@gamil.com", "Erick");
 // Erick.deleteToken()
